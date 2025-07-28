@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajudante do Papai Noel</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-gift"></i>
+                <h1>Ajudante do Papai Noel</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#como-funciona">Como Funciona</a></li>
+                    <li><a href="#apadrinhe">Apadrinhe</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="#" class="btn-login">Login</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Faça o Natal de uma criança mais feliz!</h2>
+                <p>Conectamos crianças em situação de vulnerabilidade com padrinhos que querem realizar seus sonhos de Natal.</p>
+                <a href="#apadrinhe" class="btn-primary">Apadrinhar uma Criança</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="section">
+        <div class="container">
+            <h2>Sobre o Projeto</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>O Ajudante do Papai Noel é uma plataforma social inovadora construída sobre a infraestrutura da AWS para conectar crianças em situação de vulnerabilidade com padrinhos voluntários em todo o Brasil.</p>
+                    <p>Através do nosso aplicativo e website, crianças podem enviar suas cartinhas de Natal, enquanto os padrinhos podem escolher quais crianças apadrinhar, tudo de forma segura, rápida e com logística regionalizada.</p>
+                </div>
+                <div class="about-image">
+                    <img src="images/children.jpg" alt="Crianças felizes">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="como-funciona" class="section bg-light">
+        <div class="container">
+            <h2>Como Funciona</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Crianças enviam cartinhas</h3>
+                    <p>ONGs e escolas cadastram crianças e enviam suas cartinhas digitais para nossa plataforma.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Padrinhos escolhem</h3>
+                    <p>Você pode filtrar por região e escolher uma criança para apadrinhar.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Presente é entregue</h3>
+                    <p>O presente é entregue na ONG/escola parceira mais próxima.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="apadrinhe" class="section">
+        <div class="container">
+            <h2>Apadrinhe uma Criança</h2>
+            <div class="filter">
+                <label for="region">Filtrar por região:</label>
+                <select id="region">
+                    <option value="all">Todas as regiões</option>
+                    <option value="norte">Norte</option>
+                    <option value="nordeste">Nordeste</option>
+                    <option value="centro-oeste">Centro-Oeste</option>
+                    <option value="sudeste">Sudeste</option>
+                    <option value="sul">Sul</option>
+                </select>
+            </div>
+            <div class="children-grid">
+                <!-- As cartinhas das crianças serão carregadas aqui via JavaScript -->
+                <div class="loading">Carregando cartinhas...</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="section bg-light">
+        <div class="container">
+            <h2>Contato</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Entre em contato conosco</h3>
+                    <p><i class="fas fa-envelope"></i> contato@ajudantedopapainoel.org.br</p>
+                    <p><i class="fas fa-phone"></i> (11) 1234-5678</p>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Nome:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensagem:</label>
+                            <textarea id="message" name="message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-gift"></i>
+                    <h3>Ajudante do Papai Noel</h3>
+                    <p>Conectando crianças e padrinhos para um Natal mais feliz!</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#como-funciona">Como Funciona</a></li>
+                        <li><a href="#apadrinhe">Apadrinhe</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Siga-nos</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Ajudante do Papai Noel. Todos os direitos reservados.</p>
+                <p>Projeto desenvolvido pelo Grupo BRSAO-193 da Escola da Nuvem</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>
