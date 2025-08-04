@@ -167,3 +167,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// Highlight menu item based on current page
+document.querySelectorAll('nav a').forEach(link => {
+    if (link.href === window.location.href) {
+        link.classList.add('active');
+    }
+});

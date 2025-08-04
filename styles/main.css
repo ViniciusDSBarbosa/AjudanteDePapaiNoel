@@ -490,3 +490,103 @@ footer {
 .section {
     animation: fadeIn 0.5s ease-out;
 }
+nav a.active {
+    color: #e74c3c;
+    font-weight: 600;
+}
+/* Adicione ao seu main.css */
+.participate-grid {
+    display: grid;
+    grid-template-columns: 60% 40%; /* Proporção 60/40 */
+    gap: 30px;
+    align-items: start; /* Alinhar no topo */
+}
+
+.participate-images {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: sticky;
+    top: 20px; /* Fixa durante scroll */
+}
+
+.image-container {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.image-caption {
+    margin-top: 12px;
+    font-size: 0.85rem;
+    color: #5d6d7e;
+    text-align: center;
+    padding: 0 10px;
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+    .participate-grid {
+        grid-template-columns: 1fr;
+    }
+    .participate-images {
+        margin-top: 40px;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .image-container {
+        flex: 1 1 300px;
+    }
+}
+
+@media (max-width: 576px) {
+    .participate-images {
+        flex-direction: column;
+    }
+}
+/* Estilos para o formulário de cartinha */
+.loading {
+    text-align: center;
+    padding: 15px;
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.success-message {
+    text-align: center;
+    padding: 30px;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.success-message i {
+    font-size: 4rem;
+    color: #2ecc71;
+    margin-bottom: 20px;
+}
+
+.success-message h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.hero-content h2 {
+    color: white;
+    text-shadow: 
+        0 0 5px black,
+        0 0 10px black,
+        0 0 15px black; /* Efeito "glow" suave */
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    color: white;
+    text-shadow: 0 0 5px black;
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+}

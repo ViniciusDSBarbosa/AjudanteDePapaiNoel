@@ -7,21 +7,52 @@
     <link rel="stylesheet" href="styles/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Estilos adicionais */
+        .logo img {
+            height: 50px;
+            margin-right: 15px;
+        }
+        .hero-content {
+            padding-top: 30px; /* Ajuste para baixar o texto */
+        }
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .team-member {
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .team-member img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 3px solid #e74c3c;
+        }
+    </style>
 </head>
 <body>
     <header>
         <div class="container">
             <div class="logo">
-                <i class="fas fa-gift"></i>
+                <img src="../images/logo.png" alt="Logo Ajudante do Papai Noel">
                 <h1>Ajudante do Papai Noel</h1>
             </div>
             <nav>
                 <ul>
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#como-funciona">Como Funciona</a></li>
-                    <li><a href="#apadrinhe">Apadrinhe</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                    <li><a href="#" class="btn-login">Login</a></li>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../cartinha.html">Enviar Cartinha</a></li>
+                    <li><a href="../apadrinhar.html">Apadrinhe</a></li>
+                    <li><a href="../contato.html">Contato</a></li>
+                    <li><a href="ong/login.html" class="btn-login">Login ONG</a></li>
                 </ul>
             </nav>
             <div class="mobile-menu">
@@ -30,12 +61,12 @@
         </div>
     </header>
 
-    <section class="hero">
+    <section class="hero" style="background-image: url('images/hero-bg.jpg')">
         <div class="container">
             <div class="hero-content">
                 <h2>Faça o Natal de uma criança mais feliz!</h2>
                 <p>Conectamos crianças em situação de vulnerabilidade com padrinhos que querem realizar seus sonhos de Natal.</p>
-                <a href="#apadrinhe" class="btn-primary">Apadrinhar uma Criança</a>
+                <a href="apadrinhar.html" class="btn-primary">Apadrinhar uma Criança</a>
             </div>
         </div>
     </section>
@@ -78,52 +109,110 @@
         </div>
     </section>
 
-    <section id="apadrinhe" class="section">
-        <div class="container">
-            <h2>Apadrinhe uma Criança</h2>
-            <div class="filter">
-                <label for="region">Filtrar por região:</label>
-                <select id="region">
-                    <option value="all">Todas as regiões</option>
-                    <option value="norte">Norte</option>
-                    <option value="nordeste">Nordeste</option>
-                    <option value="centro-oeste">Centro-Oeste</option>
-                    <option value="sudeste">Sudeste</option>
-                    <option value="sul">Sul</option>
-                </select>
-            </div>
-            <div class="children-grid">
-                <!-- As cartinhas das crianças serão carregadas aqui via JavaScript -->
-                <div class="loading">Carregando cartinhas...</div>
+   <section id="participe" class="section bg-light">
+    <div class="container">
+        <h2>Participe!</h2>
+        <div class="participate-content">
+            <div class="participate-grid">
+                <!-- Coluna de texto (60% width) -->
+                <div class="participate-text">
+                    <h3>Faça a diferença neste Natal!</h3>
+                    <p>O <strong>Ajudante do Papai Noel</strong> conecta padrinhos voluntários a crianças em situação de vulnerabilidade em todo o Brasil. Sua participação pode transformar o Natal de quem mais precisa:</p>
+                    
+                    <div class="participate-options">
+                        <div class="option">
+                            <i class="fas fa-gift"></i>
+                            <h4>Apadrinhe uma Criança</h4>
+                            <p>Escolha uma cartinha e realize o sonho de Natal de uma criança.</p>
+                            <a href="apadrinhar.html" class="btn-primary">Quero Apadrinhar</a>
+                        </div>
+                        
+                        <div class="option">
+                            <i class="fas fa-hands-helping"></i>
+                            <h4>Seja um Voluntário</h4>
+                            <p>Participe da organização ou entrega de presentes.</p>
+                            <a href="contato.html" class="btn-outline">Me Voluntariar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coluna de imagens (40% width) -->
+                <div class="participate-images">
+                    <div class="image-container">
+                        <img src="images/participar-1.jpg" alt="Padrinho entregando presente" 
+                             style="height: 300px; width: auto; object-fit: cover; object-position: center;">
+                        <p class="image-caption">Junte-se a nós! "Ver o sorriso de uma criança não tem preço!"</p>
+                    </div>
+                    <div class="image-container">
+                        <img src="images/participar-2.jpg" alt="Voluntários organizando presentes"
+                             style="height: 300px; width: auto; object-fit: cover; object-position: center;">
+                        <p class="image-caption">Parceiros incriveis ajudando o sonho acontecer!</p>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="contato" class="section bg-light">
+    <section id="equipe" class="section">
         <div class="container">
-            <h2>Contato</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Entre em contato conosco</h3>
-                    <p><i class="fas fa-envelope"></i> contato@ajudantedopapainoel.org.br</p>
-                    <p><i class="fas fa-phone"></i> (11) 1234-5678</p>
+            <h2>Nosso Time</h2>
+            <p class="subtitle">Conheça as pessoas por trás deste projeto</p>
+            
+            <div class="team-grid">
+                <!-- Membro 1 -->
+                <div class="team-member">
+                    <img src="images/team1.jpg" alt="Roberto">
+                    <h3>Roberto Jefferson</h3>
+                    <p>Arquiteto AWS</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
                 </div>
-                <div class="contact-form">
-                    <form>
-                        <div class="form-group">
-                            <label for="name">Nome:</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email:</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Mensagem:</label>
-                            <textarea id="message" name="message" rows="4" required></textarea>
-                        </div>
-                        <button type="submit" class="btn-primary">Enviar Mensagem</button>
-                    </form>
+                
+                <!-- Membro 2 -->
+                <div class="team-member">
+                    <img src="images/team2.jpg" alt="Gabriela">
+                    <h3>Gabriela Bernardoni</h3>
+                    <p>Desenvolvedora Front-end</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Membro 3 -->
+                <div class="team-member">
+                    <img src="images/team3.jpg" alt="Matheus">
+                    <h3>Matheus Teodoro</h3>
+                    <p>Especialista em Banco de Dados</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Membro 4 -->
+                <div class="team-member">
+                    <img src="images/team4.jpg" alt="Ana Paula">
+                    <h3>Ana Paula Lopes</h3>
+                    <p>Gerente de Projeto</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Membro 5 -->
+                <div class="team-member">
+                    <img src="images/team5.jpg" alt="Vinicius">
+                    <h3>Vinicius Barbosa</h3>
+                    <p>Designer UX/UI</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -140,10 +229,10 @@
                 <div class="footer-links">
                     <h4>Links Rápidos</h4>
                     <ul>
-                        <li><a href="#sobre">Sobre</a></li>
-                        <li><a href="#como-funciona">Como Funciona</a></li>
-                        <li><a href="#apadrinhe">Apadrinhe</a></li>
-                        <li><a href="#contato">Contato</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="cartinha.html">Enviar Cartinha</a></li>
+                        <li><a href="apadrinhar.html">Apadrinhe</a></li>
+                        <li><a href="contato.html">Contato</a></li>
                     </ul>
                 </div>
                 <div class="footer-social">
